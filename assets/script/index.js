@@ -73,7 +73,7 @@ const tecnologies = {
     rating: 3.5,
     abilities: [
       "Conexión con BD (SQL y firebase)",
-      "Creación de api rest",
+      "Creación de Api Rest",
       "Programación orientada a objetos",
       "Creación de plugins para wordpress",
     ],

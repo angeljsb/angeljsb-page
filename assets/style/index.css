@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+section {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+}
+
+@media (min-height: 1000px) {
+  section {
+    min-height: 650px;
+  }
+
+  #welcome {
+    min-height: 100vh;
+  }
+}
+
+section:nth-child(even) {
+  background-color: #101010;
+}
+
+ul {
+  line-height: 1.5;
+}
+
+a {
+  color: white;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.container--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text--title {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.text--subtitle {
+  font-size: x-large;
+  font-weight: 300;
+}
+
+.text--normal {
+  font-size: larger;
+  text-align: left;
+}
+
+.separator {
+  height: 2px;
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
+}
+
+.container--around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container--between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.container--separated {
+  padding: 30px;
+  gap: 30px;
+}
+
+.container--horizontal {
+  display: flex;
+}
+
+.container--small {
+  width: 30px;
+  height: 30px;
+}
+
+.about__description {
+  max-width: 600px;
+  text-align: center;
+}
+
+.about__image {
+  width: 200px;
+}
+
+.experience__card {
+  max-width: 320px;
+}
+
+.experience__title {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.experience__image {
+  width: 30%;
+}
+
+.experience__description {
+  font-size: small;
+  width: 65%;
+  text-align: left;
+}
+
+.tecnology__label {
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.project__card-container {
+  max-width: 240px;
+  min-width: 200px;
+}
+
+@media (min-width: 800px) {
+  .project__container {
+    gap: 10px;
+  }
+}
+
+.project__card {
+  margin: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  height: calc(100% - 10px);
+}
+
+.project__image {
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+
+.project__image-cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.project__image-cover:hover {
+  opacity: 1;
+}
+
+.project__link {
+  height: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  text-transform: uppercase;
+  transition: transform 500ms;
+}
+
+.project__link:hover {
+  transform: scale(1.2);
+}
+
+.project__link--github {
+  background-color: #101010;
+}
+
+.project__link--ir {
+  background-color: steelblue;
+}
+
+.project__container {
+  align-items: initial;
+}
+
+.project__tecnologies {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 20px;
+}
+
+.project__description {
+  text-align: justify;
+  font-size: x-small;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.project__logo {
+  height: 25%;
+}
+
+.project__logo--pdh {
+  filter: drop-shadow(0px 1px 4px white);
+}
+
+.menu__container {
+  z-index: 10;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+}
+
+.menu__container:hover .menu__button {
+  transform: rotate(-540deg);
+}
+
+.menu__button {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  transition: transform 1s;
+}
+
+.menu__dropdown {
+  position: absolute;
+  height: 0;
+  line-height: 2;
+  font-size: large;
+  overflow-y: hidden;
+  transition: height 1s;
+}
+
+.menu__container:hover .menu__dropdown {
+  height: 8em;
+}
+
+.menu__dropdown a {
+  display: block;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+.menu__dropdown a:hover {
+  background-color: black;
+  filter: invert(1);
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+input[type="radio"]:checked + .tecnology__label {
+  filter: invert(0.8);
+}
+
+.hidden {
+  display: none;
+}
+
+.img-bg {
+  width: 1000px;
+  max-width: 100%;
+  max-height: 100%;
+}

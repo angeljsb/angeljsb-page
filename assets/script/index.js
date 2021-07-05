@@ -178,6 +178,14 @@ const initTecnology = () => {
   radioBoxes.forEach(addListener);
 };
 
+const initTecnologyReferences = () => {
+  const references = document.querySelectorAll(".tecnology__reference");
+
+  const redirect = () => window.location.href = "#tecnologies";
+  references.forEach(r => r.addEventListener("click", redirect));
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   initTecnology();
+  initTecnologyReferences();
 });

@@ -157,9 +157,20 @@ a {
   text-align: left;
 }
 
+.experience__tecnologies {
+  height: 30px;
+  gap: 5px;
+  filter: invert(1);
+  margin-top: 5px;
+}
+
 .tecnology__label {
   padding: 5px;
   background-color: white;
+  cursor: pointer;
+}
+
+.tecnology__reference {
   cursor: pointer;
 }
 
